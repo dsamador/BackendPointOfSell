@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Customer
+    public class Customer : BaseModel
     {
         public Customer()
         {
@@ -21,9 +22,7 @@ namespace Domain.Models
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; } = null!;
         public string Email { get; set; } = null!;
-        public DateTime? CreatedDate { get; set; }
-        public DateTime? LastModifiedDate { get; set; }
-
+        
         public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

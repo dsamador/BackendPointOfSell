@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Product
+    public class Product : BaseModel
     {
         public Product()
         {
@@ -19,9 +20,7 @@ namespace Domain.Models
         public short SafetyStockLevel { get; set; }
         public int Stock { get; set; }
         public int CategoryId { get; set; }
-        public DateTime? CreatedDate { get; set; }
-        public DateTime? LastModifiedDate { get; set; }
-
+        
         public virtual Category Category { get; set; } = null!;
         public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
     }
