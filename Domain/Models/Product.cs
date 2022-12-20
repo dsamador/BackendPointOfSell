@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Product : BaseModel
+    public class Product : AuditableBaseEntity
     {
         public Product()
         {

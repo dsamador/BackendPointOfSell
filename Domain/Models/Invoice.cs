@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class Invoice : BaseModel
+    public class Invoice : AuditableBaseEntity
     {
         public Invoice()
         {

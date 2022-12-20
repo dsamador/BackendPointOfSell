@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Domain.Models
 {
-    public class Category : BaseModel
+    public class Category : AuditableBaseEntity
     {
         public Category()
         {

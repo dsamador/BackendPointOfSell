@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.Specification" Version="6.1.0" />
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation" Version="11.3.0" />
@@ -15,13 +16,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Domain\POS.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Persistence\" />
-    <Folder Include="Features\" />
+    <Folder Include="Features\Categories\Commands\DeleteCategoryCommand\" />
+    <Folder Include="Features\Categories\Commands\UpdateCategoryCommand\" />
     <Folder Include="Mappings\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Filters\" />
   </ItemGroup>
 
 </Project>

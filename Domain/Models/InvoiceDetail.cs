@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class InvoiceDetail : BaseModel
+    public class InvoiceDetail : AuditableBaseEntity
     {
         public int InvoiceDetailId { get; set; }
         public int InvoiceId { get; set; }
