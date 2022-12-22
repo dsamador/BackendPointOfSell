@@ -10,12 +10,11 @@ namespace Domain.Models
         }
         private int _age;
 
-        public int CostumerId { get; set; }
+        public int CustomerId { get; set; }
         public string FirstName { get; set; } = null!;
         public string? MiddleName { get; set; } = string.Empty;
         public string FirstLastName { get; set; } = null!;
-        public string? SecondLastName { get; set; } = string.Empty;
-        public string FullName => $"{FirstName} {MiddleName} {FirstLastName} {SecondLastName}";
+        public string? SecondLastName { get; set; } = string.Empty;        
         public string Address { get; set; } = null!;
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; } = null!;
