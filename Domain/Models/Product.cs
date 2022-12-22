@@ -22,6 +22,6 @@ namespace Domain.Models
         public int CategoryId { get; set; }
         
         public virtual Category Category { get; set; } = null!;
-        public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
+        public virtual ICollection<InvoiceDetail> InvoiceDetails { get; private set; }
     }
 }

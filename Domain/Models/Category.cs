@@ -1,6 +1,4 @@
 ﻿using Domain.Common;
-using System;
-using System.Collections.Generic;
 
 namespace Domain.Models
 {
@@ -15,6 +13,6 @@ namespace Domain.Models
         public string Name { get; set; } = null!;
         
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; private set; }
     }
 }

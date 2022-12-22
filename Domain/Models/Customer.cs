@@ -1,9 +1,4 @@
 ﻿using Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Models
 {
@@ -17,15 +12,16 @@ namespace Domain.Models
 
         public int CostumerId { get; set; }
         public string FirstName { get; set; } = null!;
-        public string? MiddleName { get; set; }
+        public string? MiddleName { get; set; } = string.Empty;
         public string FirstLastName { get; set; } = null!;
-        public string SecondLastName { get; set; } = null!;
+        public string? SecondLastName { get; set; } = string.Empty;
+        public string FullName => $"{FirstName} {MiddleName} {FirstLastName} {SecondLastName}";
         public string Address { get; set; } = null!;
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; } = null!;
-        public string Email { get; set; } = null!;
+        public string Email { get; set; } = null!;        
         
-        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; private set; }
 
         public int Age
         {
