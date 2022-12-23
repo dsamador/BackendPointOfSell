@@ -1,6 +1,7 @@
 using POS.Application;
 using POS.Persistence;
 using POS.Shared;
+using POS.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseErrorHandlingMiddleware();
 app.MapControllers();
 
 app.Run();
