@@ -15,7 +15,9 @@ namespace POS.Application.Features.Categories.Commands.CreateCategoryCommand
                 .MaximumLength(40)
                 .WithMessage("La {PropertyName} no puede exeder de 40 caracteres")
                 .NotEmpty()
-                .WithMessage("La {PropertyName} no puede quedar vacía");
+                .WithMessage("La {PropertyName} no puede quedar vacía")
+                .NotNull()
+                .WithMessage("La {PropertyName} no puede ser nula");
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using POS.Application.Behaviors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace POS.Application
             services.AddAutoMapper(AGEA);
             services.AddValidatorsFromAssembly(AGEA);
             services.AddMediatR(AGEA);
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         }
     }
 }

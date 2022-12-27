@@ -31,7 +31,7 @@ namespace POS.Application.Features.Categories.Commands.CreateCategoryCommand
         {
             var newRecord = _mapper.Map<Category>(request);
             var data = await _repositoryAsync.AddAsync(newRecord);
-            return new Response<int>(data.Id);
+            return new Response<int>(data.CategoryId);
         }
     }
 }
