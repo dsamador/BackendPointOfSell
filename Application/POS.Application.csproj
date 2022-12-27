@@ -20,8 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Categories\Commands\DeleteCategoryCommand\" />
-    <Folder Include="Features\Categories\Commands\UpdateCategoryCommand\" />
     <Folder Include="DTOs\" />
     <Folder Include="Filters\" />
   </ItemGroup>

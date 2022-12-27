@@ -1,11 +1,10 @@
 ﻿using FluentValidation;
 
-
-namespace POS.Application.Features.Categories.Commands.CreateCategoryCommand
+namespace POS.Application.Features.Categories.Commands.UpdateCategoryCommand
 {
-    public class CreateCategoryCommandValidator: AbstractValidator<CreateCategoryCommand>
+    internal class UpdateCategoryCommandValidator :AbstractValidator<UpdateCategoryCommand>
     {
-        public CreateCategoryCommandValidator() 
+        public UpdateCategoryCommandValidator()
         {
             RuleFor(c => c.Name)
                 .MaximumLength(40)
