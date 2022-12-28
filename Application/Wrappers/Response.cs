@@ -12,6 +12,10 @@ namespace POS.Application.Wrappers
         {
 
         }
+        public Response(int categoryId)
+        {
+
+        }
         public Response(T data, string message = null)
         {
             Succeded = true;
