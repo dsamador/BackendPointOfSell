@@ -2,10 +2,10 @@
 using Domain.Models;
 using FluentValidation;
 
-namespace POS.Application.Features.Cutomers.Commands
+namespace POS.Application.Features.Cutomers.Commands.CreateCustomerCommand
 {
     public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCommand>
-    {        
+    {
         public CreateCustomerCommandValidator()
         {
             RuleFor(c => c.FirstName)
@@ -13,7 +13,7 @@ namespace POS.Application.Features.Cutomers.Commands
                 .MaximumLength(50).WithMessage("{PropertyName} no debe exceder de {MaxLength} caracteres")
                 .NotNull().WithMessage("La {PropertyName} no puede ser nula");
 
-            RuleFor(c => c.MiddleName)                
+            RuleFor(c => c.MiddleName)
                 .MaximumLength(50).WithMessage("{PropertyName} no debe exceder de {MaxLength} caracteres");
 
             RuleFor(c => c.FirstLastName)
@@ -21,7 +21,7 @@ namespace POS.Application.Features.Cutomers.Commands
                 .MaximumLength(50).WithMessage("{PropertyName} no debe exceder de {MaxLength} caracteres")
                 .NotNull().WithMessage("La {PropertyName} no puede ser nula");
 
-            RuleFor(c => c.SecondLastName)                
+            RuleFor(c => c.SecondLastName)
                 .MaximumLength(50).WithMessage("{PropertyName} no debe exceder de {MaxLength} caracteres");
 
             RuleFor(c => c.Address)
@@ -30,9 +30,9 @@ namespace POS.Application.Features.Cutomers.Commands
                 .NotNull().WithMessage("La {PropertyName} no puede ser nula");
 
             RuleFor(c => c.DateOfBirth)
-                .NotEmpty().WithMessage("{PropertyName} no puede ser vacio.")                
+                .NotEmpty().WithMessage("{PropertyName} no puede ser vacio.")
                 .NotNull().WithMessage("La {PropertyName} no puede ser nula");
-            
+
             RuleFor(c => c.PhoneNumber)
                 .NotEmpty().WithMessage("{PropertyName} no puede ser vacio.")
                 .NotNull().WithMessage("La {PropertyName} no puede ser nula");

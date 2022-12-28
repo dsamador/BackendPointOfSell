@@ -5,10 +5,10 @@ using POS.Application.Interfaces;
 using POS.Application.Wrappers;
 
 
-namespace POS.Application.Features.Cutomers.Commands
+namespace POS.Application.Features.Cutomers.Commands.CreateCustomerCommand
 {
-    public class CreateCustomerCommand: IRequest<Response<int>>
-    {        
+    public class CreateCustomerCommand : IRequest<Response<int>>
+    {
         public string FirstName { get; set; } = null!;
         public string? MiddleName { get; set; } = string.Empty;
         public string FirstLastName { get; set; } = null!;
