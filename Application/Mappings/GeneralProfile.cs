@@ -2,11 +2,7 @@
 using Domain.Models;
 using POS.Application.DTOs;
 using POS.Application.Features.Categories.Commands.CreateCategoryCommand;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using POS.Application.Features.Cutomers.Commands;
 
 namespace POS.Application.Mappings
 {
@@ -20,7 +16,9 @@ namespace POS.Application.Mappings
 
             #region Commands
             CreateMap<CreateCategoryCommand, Category>();
+            CreateMap<CreateCustomerCommand, Customer>();
             #endregion
+
         }
     }
 }

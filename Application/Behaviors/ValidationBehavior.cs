@@ -1,10 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace POS.Application.Behaviors
 {
@@ -20,7 +16,7 @@ namespace POS.Application.Behaviors
         {
             if(_validators.Any())
             {
-                var context = new FluentValidation.ValidationContext<TRequest>(request);
+                var context = new ValidationContext<TRequest>(request);
                 var validationResults = await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, cancellationToken)));
                 var failures = validationResults.SelectMany(r => r.Errors).Where(f => f != null).ToList();
 
