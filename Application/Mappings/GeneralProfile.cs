@@ -2,7 +2,7 @@
 using Domain.Models;
 using POS.Application.DTOs;
 using POS.Application.Features.Categories.Commands.CreateCategoryCommand;
-using POS.Application.Features.Cutomers.Commands;
+using POS.Application.Features.Cutomers.Commands.CreateCustomerCommand;
 
 namespace POS.Application.Mappings
 {

@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Cutomers\Commands\UpdateCustomerCommand\" />
     <Folder Include="Features\Cutomers\Queries\" />
     <Folder Include="Filters\" />
   </ItemGroup>
