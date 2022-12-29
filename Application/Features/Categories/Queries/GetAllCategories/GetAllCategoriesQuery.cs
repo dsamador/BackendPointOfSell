@@ -3,6 +3,7 @@ using Domain.Models;
 using MediatR;
 using POS.Application.DTOs;
 using POS.Application.Interfaces;
+using POS.Application.Specifications;
 using POS.Application.Wrappers;
 
 
@@ -27,7 +28,10 @@ namespace POS.Application.Features.Categories.Queries.GetAllCategories
 
             public async Task<PagedResponse<List<CategoryDto>>> Handle(GetAllCategoriesQuery request, CancellationToken cancellationToken)
             {
-                throw new NotImplementedException();
+                var categories = await _repositoryAsync.ListAsync(new PagedCategoriesSpecification(request.PageSize, request.PageNumber, request.Name));                
+                var categoryDto = _mapper.Map<List<CategoryDto>>(categories);
+
+                return new PagedResponse<List<CategoryDto>>(categoryDto, request.PageNumber, request.PageSize);
             }
         }
     }

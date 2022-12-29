@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace POS.Application.Features.Categories.Queries.GetAllCategories
 {
-    public class GetAllCategoriesParameters :RequestParameter
+    public class GetAllCategoriesParameters : RequestParameter
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }
