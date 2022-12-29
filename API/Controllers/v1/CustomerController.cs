@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using POS.Application.Features.Cutomers.Commands.CreateCustomerCommand;
 using POS.Application.Features.Cutomers.Commands.DeleteCustomerCommand;
+using POS.Application.Features.Cutomers.Commands.UpdateCustomerCommand;
 
 namespace POS.WebApi.Controllers.v1
 {
@@ -11,6 +12,16 @@ namespace POS.WebApi.Controllers.v1
         [HttpPost]
         public async Task<IActionResult> Post(CreateCustomerCommand command)
         {
+            return Ok(await Mediator.Send(command));
+        }
+
+        //PUT api/<controller>
+        [HttpPut]
+        public async Task<IActionResult> Put(int id, UpdateCustomerCommand command)
+        {
+            if (id != command.CustomerId)
+                return BadRequest();
+
             return Ok(await Mediator.Send(command));
         }
 
