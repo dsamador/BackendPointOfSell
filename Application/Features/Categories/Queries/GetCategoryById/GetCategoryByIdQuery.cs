@@ -15,12 +15,12 @@ namespace POS.Application.Features.Categories.Queries.GetCategoryById
     public class GetCategoryByIdQuery : IRequest<Response<CategoryDto>>
     {
         public int CategoryId { get; set; }
-        public class GetClienteByIdQueryHandler : IRequestHandler<GetCategoryByIdQuery, Response<CategoryDto>>
+        public class GetCategoryByIdQueryHandler : IRequestHandler<GetCategoryByIdQuery, Response<CategoryDto>>
         {
             private readonly IRepositoryAsync<Category> _repositoryAsync;
             private readonly IMapper _mapper;
 
-            public GetClienteByIdQueryHandler(IRepositoryAsync<Category> repositoryAsync, IMapper mapper)
+            public GetCategoryByIdQueryHandler(IRepositoryAsync<Category> repositoryAsync, IMapper mapper)
             {
                 _repositoryAsync = repositoryAsync;
                 _mapper = mapper;

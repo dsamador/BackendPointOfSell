@@ -5,7 +5,7 @@ using POS.Application.DTOs;
 using POS.Application.Interfaces;
 using POS.Application.Wrappers;
 
-namespace POS.Application.Features.Cutomers.Queries
+namespace POS.Application.Features.Cutomers.Queries.GetCustomerById
 {
     public class GetCustomerByIdQuery : IRequest<Response<CustomerDto>>
     {
