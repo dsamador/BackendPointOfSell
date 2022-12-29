@@ -8,7 +8,7 @@ namespace Domain.Models
         {
             Invoices = new HashSet<Invoice>();
         }
-        private int _age;
+        //private int _age;
 
         public int CustomerId { get; set; }
         public string FirstName { get; set; } = null!;
@@ -22,14 +22,15 @@ namespace Domain.Models
         
         public virtual ICollection<Invoice> Invoices { get; private set; }
 
-        public int Age
-        {
-            get
-            {
-                if (this._age <= 0)
-                    this._age = new DateTime(DateTime.Now.Subtract(this.DateOfBirth).Ticks).Year - 1;
-                return this._age;                
-            } 
-        }
+        //public int Age
+        //{
+        //    get
+        //    {
+        //        if (_age <= 0)
+        //            _age = new DateTime(DateTime.Now.Subtract(DateOfBirth).Ticks).Year - 1;
+        //        return _age;                
+        //    }
+        //    set { _age = value; }
+        //}
     }
 }

@@ -29,7 +29,7 @@ namespace POS.Application.Features.Categories.Queries.GetCategoryById
             public async Task<Response<CategoryDto>> Handle(GetCategoryByIdQuery request, CancellationToken cancellationToken)
             {
                 var category = await _repositoryAsync.GetByIdAsync(request.CategoryId);
-                if (category == null)
+                if (category == null || category.IsDeleted == true)
                     throw new KeyNotFoundException($"Registro no encontrado con el id {request.CategoryId}");
                 else
                 {
