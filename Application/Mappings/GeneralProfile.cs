@@ -3,6 +3,7 @@ using Domain.Models;
 using POS.Application.DTOs;
 using POS.Application.Features.Categories.Commands.CreateCategoryCommand;
 using POS.Application.Features.Cutomers.Commands.CreateCustomerCommand;
+using POS.Application.Features.Products.Commands.CreateProductCommand;
 
 namespace POS.Application.Mappings
 {
@@ -18,6 +19,7 @@ namespace POS.Application.Mappings
             #region Commands
             CreateMap<CreateCategoryCommand, Category>();
             CreateMap<CreateCustomerCommand, Customer>();
+            CreateMap<CreateProductCommand, Product>();
             #endregion
 
         }

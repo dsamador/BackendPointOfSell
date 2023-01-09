@@ -36,6 +36,7 @@ namespace POS.WebApi.Controllers.v1
         {
             return Ok(await Mediator.Send(command));
         }
+
         //PUT api/<controller>
         [HttpPut]
         public async Task<IActionResult> Put(int id, UpdateCategoryCommand command)
