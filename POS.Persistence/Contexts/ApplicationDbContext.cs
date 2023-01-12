@@ -19,6 +19,8 @@ namespace POS.Persistence.Contexts
             _dateTime = dateTime;
         }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Product> Products { get; set; }
         public override Task<int> SaveChangesAsync(
             CancellationToken cancellationToken = new CancellationToken())
         {

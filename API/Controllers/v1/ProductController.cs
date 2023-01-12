@@ -2,6 +2,7 @@
 using POS.Application.Features.Products.Commands.CreateProductCommand;
 using POS.Application.Features.Products.Commands.DeleteProductCommand;
 using POS.Application.Features.Products.Commands.UpdateProductCommand;
+using POS.Application.Features.Products.Queries.GetProductById;
 
 namespace POS.WebApi.Controllers.v1
 {
@@ -31,5 +32,10 @@ namespace POS.WebApi.Controllers.v1
         {
             return Ok(await Mediator.Send(command));
         }
+
+        //GET: api/<controller>/1
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+            => Ok(await Mediator.Send(new GetProductByIdQuery { ProductId = id }));
     }
 }

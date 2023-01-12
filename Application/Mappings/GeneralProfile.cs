@@ -14,6 +14,7 @@ namespace POS.Application.Mappings
             #region DTO's
             CreateMap<Category, CategoryDto>();
             CreateMap<Customer, CustomerDto>();
+            CreateMap<Product, ProductDto>();
             #endregion
 
             #region Commands
